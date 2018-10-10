@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	background-color: #151820;
+
+	margin: 0;
+	padding: 0;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.measurement {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 75px;
+	border-radius: 10px;
+	background-color: #568af2;
+	overflow: visible;
+	transition: opacity .15s;
+}
+
+.measurement.hide {
+	opacity: 0 !important;
+}
+
+.measurement.show {
+	opacity: 1 !important;
+}
+
+.measurement span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-family: "Roboto";
+	white-space: nowrap;
+	opacity: 0;
+	transition: opacity .15s;
+}
+
+.measurement:hover span {
+	opacity: 1;
+}
+
+.measurement span.vertical {
+	writing-mode: vertical-rl;
+	-webkit-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+}
+
+.measurement.rounded {
+	border-radius: 10000px
+}
+
+.error:not(body) {
+	font-size: 30px;
+	font-family: "Roboto";
+	color: #e74c3c;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+
+.errorNoM .errorNoM, .errorBadU .errorBadU, .errorBadM .errorBadM {
+	display: inline-block !important;
+}
