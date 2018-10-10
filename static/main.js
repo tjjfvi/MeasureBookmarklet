@@ -3,10 +3,17 @@ $(function(){
 	const splitRegex = /^r?\s?(\d+(?:\.\d+)?(?:\w\w|))\s?x\s?(\d+(?:\.\d+)?(?:\w\w|)$)/;
 	const propertyArr = ["width", "height"];
 
+	$(".inputField").keyup(function(e){
+		if(e.key === "Enter")
+			window.location = `?m=${$(this).val()}`;
+	});
+
 	let m;
 	try {
 		m = decodeURIComponent(window.location.search.slice(1).split("&").map(s => s.split("=")).filter(a => a[0] === "m")[0][1]);
 	} catch(e) {}
+
+	$(".inputField").val(m)
 
 	if(!m) throw error("NoM");
 
