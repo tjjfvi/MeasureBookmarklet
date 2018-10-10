@@ -15,7 +15,7 @@ In Chrome, got to Settings -> Manage search engines and click "Add". Then put a 
 
 ## Usage
 
-Once setup, open a new tab and typeyour keyword followed by a space and the the measurement (like "43cm").
+Once setup, open a new tab and type your keyword followed by a space and the the measurement (like "43cm").
 
 ## Measurement Syntax
 
